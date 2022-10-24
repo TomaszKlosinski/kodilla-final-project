@@ -10,7 +10,7 @@
 <form action="" method="POST">
     {{form.hidden_tag()}}
     <div class="form-group">
-        <label for="title">Login</label>
+        <label for="title">Username</label>
         {% if errors and errors.username %}
         {{ form.username(class_="form-control is-invalid") }}
         {% else %}
@@ -20,7 +20,7 @@
 
     </div>
     <div class="form-group">
-        <label for="body">Hasło</label>
+        <label for="body">Password</label>
 
         {% if errors and errors.password %}
         {{ form.password(class_="form-control is-invalid") }}
@@ -30,7 +30,7 @@
         <div class="invalid-feedback">{{ errors.password|join(' ') }}</div>
 
     </div>
-    <button type="submit" class="btn btn-primary mt-5">Zaloguj</button>
+    <button type="submit" class="btn btn-primary mt-5">Log in</button>
 </form>
 
 {% endblock %}
