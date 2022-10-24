@@ -85,7 +85,6 @@ def create_or_edit_entry(entry_id=None):
 @app.route("/posts/<int:entry_id>/delete", methods=["POST"])
 @login_required
 def delete_entry(entry_id):
-    print("Hello")
     entry = Entry.query.filter_by(id=entry_id).first_or_404()
     if request.method == 'POST':
         db.session.delete(entry)
