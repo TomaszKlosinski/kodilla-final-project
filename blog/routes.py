@@ -101,4 +101,6 @@ def list_drafts():
     return render_template("drafts.html", drafts=drafts)
 
 
-
+@app.route("/about")
+def about():
+    return render_template("about.html")
