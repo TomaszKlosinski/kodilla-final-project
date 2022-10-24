@@ -1,3 +1,5 @@
+[![kodilla-final-project](https://github.com/TomaszKlosinski/kodilla-final-project/actions/workflows/ci.yaml/badge.svg)](https://github.com/TomaszKlosinski/kodilla-final-project/actions/workflows/ci.yaml)
+
 # kodilla-final-project
 Final Project for Kodilla Python Bootcamp
 
