@@ -1,7 +1,6 @@
-from wtforms import StringField, TextAreaField, BooleanField
+from wtforms import StringField, TextAreaField, BooleanField, PasswordField
 from werkzeug.routing import ValidationError
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField
 from wtforms.validators import DataRequired
 from config import Config
 

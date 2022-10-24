@@ -47,9 +47,9 @@ def logout():
     return redirect(url_for('index'))
 
 
-@login_required
 @app.route("/posts/<int:entry_id>", methods=["GET", "POST"])
 @app.route("/posts/", methods=["GET", "POST"])
+@login_required
 def create_or_edit_entry(entry_id=None):
     errors = None
 
