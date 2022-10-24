@@ -1,4 +1,4 @@
-name: Python package
+name: kodilla-final-project
 
 on: [push]
 
