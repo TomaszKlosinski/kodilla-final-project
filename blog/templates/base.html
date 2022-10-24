@@ -14,10 +14,10 @@
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <style>
-   body {
-     padding-top: 5rem;
-   }
- </style>
+       body {
+         padding-top: 5rem;
+       }
+    </style>
 </head>
 
 <body>
@@ -41,15 +41,21 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('create_or_edit_entry') }}">New post</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('list_drafts') }}">Drafts</a>
+            </li>
         </ul>
         {% if session.logged_in %}
         <form class="form-inline my-2 my-lg-0" action="{{ url_for('logout') }}" method="POST">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Wyloguj</button>
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Log out</button>
         </form>
         {% else %}
-        <a href="{{ url_for('login') }}" class="btn btn-secondary my-2 my-lg-0">Zaloguj</a>
+        <a href="{{ url_for('login') }}" class="btn btn-secondary my-2 my-lg-0">Log in</a>
         {% endif %}
     </div>
 </nav>
