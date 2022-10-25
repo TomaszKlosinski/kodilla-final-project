@@ -10,9 +10,9 @@ See other exercises and notes from the Python Bootcamp:
 https://github.com/TomaszKlosinski/kodilla-python-bootcamp/ 
 
 
-## Local deployment
+## Local development
 
-Run locally:
+To run the application locally:
 ```shell
 pip install -r base/requirements.txt
 export FLASK_APP=blog.py
@@ -21,7 +21,9 @@ flask run
 
 ## Tests
 
-Run:
+Run locally:
 ```
 pytest -v
 ```
+Or see the results on Continuous Integration workflow:
+https://github.com/TomaszKlosinski/kodilla-final-project/actions
