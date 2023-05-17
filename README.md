@@ -4,10 +4,13 @@
 Final Project for Kodilla Python Bootcamp - a flask-based Blog application.
 
 See the deployed project on Heroku:
-https://kodilla-final-project.herokuapp.com/
+* https://kodilla-final-project.herokuapp.com/
 
-See other exercises and notes from the Python Bootcamp:
-https://github.com/TomaszKlosinski/kodilla-python-bootcamp/
+See also other exercises and notes from the Python Bootcamp:
+* https://github.com/TomaszKlosinski/kodilla-python-bootcamp/
+* https://github.com/TomaszKlosinski/kodilla-python-testing
+* https://github.com/TomaszKlosinski/kodilla-django
+* https://github.com/TomaszKlosinski/kodilla-django-final-project
 
 
 ## Local development
@@ -54,7 +57,7 @@ Or if you have Vagrant+VirtualBox, you can use:
 vagrant up
 ```
 
-<!-- ## CI/CD
+## CI/CD
 
 See the tests on Continuous Integration workflow:
-https://github.com/TomaszKlosinski/kodilla-final-project/actions -->
+https://github.com/TomaszKlosinski/kodilla-final-project/actions
