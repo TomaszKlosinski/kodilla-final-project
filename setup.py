@@ -9,5 +9,7 @@ setuptools.setup(
         'flask',
         'flask-migrate',
         'requests',
+        'flask-wtf',
+        'Flask-SQLAlchemy'
     ]
 )
