@@ -4,7 +4,7 @@ setuptools.setup(
     version='1.0',
     packages=setuptools.find_packages(exclude=['tests']),
     long_description='Blog app',
-    python_requires='==3.11',
+    python_requires='==3.10',
     install_requires=[
         'flask',
         'flask-migrate',
