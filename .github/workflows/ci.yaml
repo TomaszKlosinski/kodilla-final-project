@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   tests:
-    name: Run tox
+    name: Run tests
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
@@ -34,7 +34,19 @@ jobs:
     steps:
       - name: Build and publish package
         run: |
-          python -m pip instal --upgrade wheel twine
+          python -m pip install --upgrade wheel twine
           python setup.py bdist_wheel
           twine check dist/*.whl
           twine upload --repository-url https://test.pypi.org/legacy/ dist/*.whl -udummy -pdummy || echo
+
+  deploy:
+    needs:
+      - tests
+      - build
+    name: Run build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deplloy application
+        run: |
+          echo "TODO"
