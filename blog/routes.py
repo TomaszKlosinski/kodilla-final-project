@@ -4,7 +4,6 @@ from blog.forms import EntryForm
 from flask import render_template, request, session, flash, redirect, url_for
 from blog.forms import LoginForm
 import functools
-import data_generator
 
 
 def login_required(view_func):
@@ -18,7 +17,6 @@ def login_required(view_func):
 
 @app.route("/")
 def index():
-    # data_generator.generate_entries()
     all_posts = Entry.query.filter_by(is_published=True).order_by(Entry.pub_date.desc())
     return render_template("homepage.html", all_posts=all_posts)
 
@@ -28,14 +26,16 @@ def login():
     form = LoginForm()
     errors = None
     next_url = request.args.get('next')
+
     if request.method == 'POST':
         if form.validate_on_submit():
             session['logged_in'] = True
-            session.permanent = True  # Use cookie to store session.
+            session.permanent = True  # Use cookie to store session
             flash('You are now logged in.', 'success')
             return redirect(next_url or url_for('index'))
         else:
             errors = form.errors
+
     return render_template("login_form.html", form=form, errors=errors)
 
 
@@ -100,6 +100,6 @@ def list_drafts():
     return render_template("drafts.html", drafts=drafts)
 
 
-@app.route("/about")
+@app.route("/about/")
 def about():
     return render_template("about.html")

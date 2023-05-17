@@ -18,7 +18,7 @@
         {% else %}
         {{ form.username(class_="form-control") }}
         {% endif %}
-        <div class="invalid-feedback">
+        <div class="invalid-feedback-username">
             {{ errors.username|join(' ') }}
         </div>
     </div>
@@ -30,12 +30,12 @@
         {% else %}
         {{ form.password(class_="form-control") }}
         {% endif %}
-        <div class="invalid-feedback">
+        <div class="invalid-feedback-password">
             {{ errors.password|join(' ') }}
         </div>
     </div>
 
-    <button type="submit" class="btn btn-primary mt-5">Log in</button>
+    <button type="submit" class="btn btn-primary mt-5" id='submit'>Log in</button>
 </form>
 
 {% endblock %}

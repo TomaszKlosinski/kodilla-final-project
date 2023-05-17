@@ -7,23 +7,54 @@ See the deployed project on Heroku:
 https://kodilla-final-project.herokuapp.com/
 
 See other exercises and notes from the Python Bootcamp:
-https://github.com/TomaszKlosinski/kodilla-python-bootcamp/ 
+https://github.com/TomaszKlosinski/kodilla-python-bootcamp/
 
 
 ## Local development
 
 To run the application locally:
 ```shell
-pip install -r base/requirements.txt
+pip install -r requirements.txt
 export FLASK_APP=blog.py
 flask run
 ```
 
+Alternatively, you can use docker:
+```shell
+docker build -t blog .
+docker run -p 8080:5000 --name blog blog
+```
+
+Or docker-compose:
+```shell
+docker-compose build
+docker-compose up
+```
+
+
 ## Tests
 
-Run locally:
+Install required packages:
+```shell
+pip install -r requirements.txt
 ```
+
+Run locally:
+```shell
 pytest -v
 ```
-Or see the results on Continuous Integration workflow:
-https://github.com/TomaszKlosinski/kodilla-final-project/actions
+
+Tests with different Python versions:
+```shell
+tox --recreate
+```
+
+Or if you have Vagrant+VirtualBox, you can use:
+```shell
+vagrant up
+```
+
+<!-- ## CI/CD
+
+See the tests on Continuous Integration workflow:
+https://github.com/TomaszKlosinski/kodilla-final-project/actions -->
