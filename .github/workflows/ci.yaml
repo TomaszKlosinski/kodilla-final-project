@@ -3,7 +3,7 @@ name: kodilla-final-project
 on: [push]
 
 jobs:
-  tox:
+  tests:
     name: Run tox
     runs-on: ubuntu-latest
     strategy:
@@ -24,8 +24,17 @@ jobs:
           pip install tox tox-gh-actions
       - name: Test with tox
         run: tox
+
+  build:
+    needs:
+      - tests
+    name: Run build
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Build and publish package
         run: |
+          python -m pip instal --upgrade wheel twine
           python setup.py bdist_wheel
           twine check dist/*.whl
           twine upload --repository-url https://test.pypi.org/legacy/ dist/*.whl -udummy -pdummy || echo
